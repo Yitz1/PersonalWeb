@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal - Isaac Friedman</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Status Bar -->
+    <header class="status-bar">
+        <div class="status-left">
+            <img src="assets/logo.svg" alt="Terminal" class="logo">
+            <span class="logo-text">TERMINAL</span>
+        </div>
+        <div class="status-center">
+            <div class="ticker-container">
+                <div class="ticker" id="ticker">
+                    <span id="tickerContent">Loading market data...</span>
+                </div>
+            </div>
+        </div>
+        <div class="status-right">
+            <div class="clock" id="clock">00:00:00 UTC</div>
+        </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="workspace">
+        <!-- Left Panel - Data/Reading Panel -->
+        <section class="left-panel">
+            <div class="command-line">
+                <span class="prompt">Command:</span>
+                <input type="text" id="commandInput" class="command-input" placeholder="Type command and press Enter..." autocomplete="off">
+                <button id="goButton" class="go-button">&lt;GO&gt;</button>
+            </div>
+            <div class="autocomplete" id="autocomplete"></div>
+            <div class="content-area" id="contentArea">
+                <div class="welcome-screen">
+                    <h1>PORTFOLIO TERMINAL</h1>
+                    <p>Personal Portfolio System</p>
+                    <p class="subtitle">Type a command and press Enter or click &lt;GO&gt;</p>
+                    <div class="available-commands">
+                        <h3>Available Commands:</h3>
+                        <ul>
+                            <li><span class="cmd">YITZ</span> - About Me</li>
+                            <li><span class="cmd">SUB</span> - Substack</li>
+                            <li><span class="cmd">TWIT</span> - Twitter</li>
+                            <li><span class="cmd">STRA</span> - Strava</li>
+                            <li><span class="cmd">LINK</span> - LinkedIn</li>
+                            <li><span class="cmd">READ</span> - Goodreads</li>
+                            <li><span class="cmd">HELP</span> - Help</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Panel - Help -->
+        <section class="right-panel">
+            <div class="help-section" id="helpSection">
+                <div class="panel-header">
+                    <h3>HELP</h3>
+                </div>
+                <div class="help-content">
+                    <p>Type any command and press Enter or click &lt;GO&gt;</p>
+                    <p>Use function keys F1-F12 for quick access</p>
+                    <p>All external links open in new tabs</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Function Key Bar -->
+    <footer class="function-bar">
+        <button class="function-key" data-key="F1" data-command="HELP">F1 HELP</button>
+        <button class="function-key" data-key="F2" data-command="SUB">F2 SUBSTACK</button>
+        <button class="function-key" data-key="F3" data-command="TWIT">F3 TWITTER</button>
+        <button class="function-key" data-key="F4" data-command="STRA">F4 STRAVA</button>
+        <button class="function-key" data-key="F5" data-command="LINK">F5 LINKEDIN</button>
+        <button class="function-key" data-key="F6" data-command="READ">F6 GOODREADS</button>
+        <button class="function-key" data-key="F12" data-command="EXIT">F12 EXIT</button>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
